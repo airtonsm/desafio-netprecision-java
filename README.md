@@ -1,6 +1,6 @@
 <h1 align="center">Desafio Netprecision Java</h1>
 
-<p align="center">O desafio consiste em realizar servicos com o objetivo de auxiliar 
+<p align="center">O desafio consiste em realizar servicos para auxiliar 
 na venda de produtos de uma empresa que atua no ramo de lanchonetes.</p>
 
 <br>
@@ -54,7 +54,7 @@ Informações da imagem estão do arquivo ``docker-compose.yml`` e informações
 
 - comando para subir a image docker postgres
 
-    ``` docker-compose -d```
+    ``` docker-compose up -d```
 
 </br>
 </br>
