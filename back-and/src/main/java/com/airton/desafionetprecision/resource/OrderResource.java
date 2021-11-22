@@ -44,5 +44,4 @@ public class OrderResource {
         return ResponseEntity.ok().body(order);
     }
 
-
 }
