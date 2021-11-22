@@ -1,0 +1,31 @@
+{
+  "name": "dia-03",
+  "version": "1.0.0",
+  "description": "Codigo Maratona AngularJS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maratonistas/maratona-stefanini-semana1-aula03.git"
+  },
+  "author": "airtonsm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maratonistas/maratona-stefanini-semana1-aula03/issues"
+  },
+  "homepage": "https://github.com/maratonistas/maratona-stefanini-semana1-aula03#readme",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "grunt": "^1.4.1",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "devDependencies": {}
+}
