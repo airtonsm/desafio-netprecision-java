@@ -1,0 +1,42 @@
+<div
+  ng-controller="ProductController as vm"
+  class="container"
+  ng-init="vm.iniciar()"
+>
+  <div class="d-flex justify-content-between align-items-center">
+    <h2>Lista de produtos</h2>
+  </div>
+  <hr />
+  <div class="list-group">
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-active">
+          <th scope="col">Descriçaõ</th>
+          <th scope="col">Preco</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="prod in vm.produtosListados">
+        <tr class="table-dark">
+          <td>{{prod.name}}</td>
+          <td>{{prod.price}}</td>
+          <td><button class="btn btn-primary">Editar</button></td>
+          <td><button class="btn btn-primary">excluir</button></td>
+        </tr>
+      </tbody>
+      <!-- <a
+      ng-click=""
+      ng-repeat="prod in vm.produtosListados"
+      class="
+        list-group-item list-group-item-action
+        d-flex
+        justify-content-between
+        align-items-center
+      "
+    >
+      {{prod.name}}
+
+      <span class="badge badge-primary badge-pill">{{prod.price}}</span>
+    </a> -->
+    </table>
+  </div>
+</div>

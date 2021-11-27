@@ -20,8 +20,14 @@
         // controller: 'AcessoController',
         // controller: 'vm'
       })
+      .when("/registerProduct", {
+        templateUrl: "./templates/registerProduct.tpl.html",
+      })
       .when("/register", {
         templateUrl: "./templates/register.tpl.html",
+      })
+      .when("/listProduct", {
+        templateUrl: "./templates/listProduct.tpl.html",
       })
       .otherwise({
         redirectTo: "/login",

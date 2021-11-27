@@ -1,0 +1,109 @@
+<div
+ng-controller="ProductController as vm"
+  class="row justify-content-center align-items-center login-row"
+>
+<div class="col">
+    <div class="container mx-auto py-5 mt-5 jumbotron" style="width: 600px">
+      <h3 class="text-center text-uppercase">Cadastrar de Produtos</h3>
+      <form name="vm.cadForm" ng-submit="vm.cadastrar();">
+        <div class="form-group">
+            <label>Código do produto</label>
+            <input
+              class="form-control"
+              type="text"
+              name="id"
+              ng-model="vm.produto.id"
+              ng-required="true"
+              placeholder="Id do produto"
+            />
+            <small
+              ng-show="vm.cadForm.nomeCompleto.$error.required && vm.validar"
+              class="form-text text-danger"
+            >
+              Campo obrigatório!
+            </small>
+          </div>
+        <div class="form-group">
+          <label>Nome do produto</label>
+          <input
+            class="form-control"
+            type="text"
+            name="nome"
+            ng-model="vm.produto.nome"
+            ng-required="true"
+            placeholder="Nome do produto"
+          />
+          <small
+            ng-show="vm.cadForm.nomeCompleto.$error.required && vm.validar"
+            class="form-text text-danger"
+          >
+            Campo obrigatório!
+          </small>
+        </div>
+        <div class="form-group">
+          <label>Preço</label>
+          <input
+            class="form-control"
+            type="preco"
+            name="preco"
+            ng-model="vm.produto.preco"
+            ng-required="true"
+            placeholder="indique o valor do produto"
+          />
+          <small
+            ng-show="vm.cadForm.email.$error.required && vm.validar"
+            class="form-text text-danger"
+          >
+            Campo obrigatório!
+          </small>
+        </div>
+
+        <div class="form-group">
+            <label>Categoria do produto</label>
+            <select
+                class="form-control"
+                ng-model="vm.produto.categoria"
+                name="categoria"
+                ng-options="item.desc for item in vm.categoria"
+            >
+            <option value="">Selecione...</option>
+
+            </select>
+            <span style="font-size: 2rem">{{vm.produto.categoria | json}}</span>
+          </div>
+
+          <button type="button" ng-click="vm.addFile()">Confirm file</button>
+          <input type="file" id="arquivo" />
+          <hr>
+         <p ng-if="vm.isEnviado">Pessoa enviada</p>
+          <div ng-if="vm.isImagem">
+          <p>O arquivo é uma imagem:</p>
+          <img data-ng-src="{{vm.produto.imagem.dados}}" alt="imagem" ng-model="vm.produto">
+  </div>
+
+          <!-- <div class="form-group">
+            <label for="imagem" class="form-label mt-4">imagem produto</label>
+            <input class="form-control" name="imagem" type="file" id=" imagem" ng-model="vm.produto.imagem">
+          </div> -->
+        
+        <div class="form-group">
+          <!-- <label>Tipo E-mail</label>
+          <select
+            class="form-control"
+            ng-model="vm.user.tipoEmail"
+            name="tipo"
+            ng-options="item.desc group by item.tipo disable when item.disable for item in vm.tiposEmail | orderBy:'desc'"
+          >
+            <option value="">Selecione...</option>
+          </select>
+          <span style="font-size: 2rem">{{vm.user.tipoEmail | json}}</span>
+        </div> -->
+        <button
+          class="btn btn-primary mb-1"
+          type="submit" >
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

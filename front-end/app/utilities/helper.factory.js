@@ -3,7 +3,7 @@
 
   angular.module("listaComprasApp").factory("helperfactory", helperfactory);
 
-  helperfactory.$inject = ["$rootScope", "constantes"];
+  helperfactory.$inject = ["$rootScope", "constantes", "$location"];
 
   function helperfactory($rootScope, constantes) {
     $rootScope.listaMensagens = [];
