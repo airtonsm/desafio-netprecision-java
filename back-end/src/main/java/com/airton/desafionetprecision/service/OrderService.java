@@ -44,7 +44,7 @@ public class OrderService {
             Integer quantity = product.getQuantity().equals(0) ? 1 : product.getQuantity();
             if(productIndex == -1){
                 order.getProducts().add(
-                        new OrderProduct(order, productRepository.getById(product.getId()), quantity));
+                        new OrderProduct(order, productRepository.getById(Math.toIntExact(Long.valueOf(product.getId()))), quantity));
             }else{
                 order.getProducts().get(productIndex).addQuantity(quantity);
             }

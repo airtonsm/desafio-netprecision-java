@@ -2,16 +2,13 @@ package com.airton.desafionetprecision.resource;
 
 import com.airton.desafionetprecision.dto.EmployeeDTO;
 import com.airton.desafionetprecision.exception.GlobalExceptionHandler;
-import com.airton.desafionetprecision.exception.NegocialException;
 import com.airton.desafionetprecision.service.EmployeeService;
 import com.google.gson.Gson;
-import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
 import java.util.List;
 
 @RestController
@@ -22,10 +19,9 @@ public class EmployeeResource {
     @Autowired
     private EmployeeService service;
 
-    private static final Gson gson = new Gson();
-
     @PostMapping
     public ResponseEntity<EmployeeDTO> save(@RequestBody EmployeeDTO employeeDTO) throws GlobalExceptionHandler {
+
         EmployeeDTO saveDTO = service.save(employeeDTO);
         if(saveDTO != null) {
             return ResponseEntity.status(HttpStatus.CREATED).body(saveDTO);

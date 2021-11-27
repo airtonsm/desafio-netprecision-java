@@ -14,10 +14,13 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class ProductDTO implements Serializable {
 
-    private Long id;
+    private Integer id;
     private String name;
     private BigDecimal price;
     private Integer quantity;
+    private String imageName;
+    private String base64;
+
 
     public BigDecimal calcTotal(){
         return price.multiply(BigDecimal.valueOf(quantity));

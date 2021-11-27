@@ -19,15 +19,16 @@ import java.util.Set;
 public class Product implements Serializable {
 
     @Id
-    private Long id;
+    private Integer id;
     private String name;
     private BigDecimal price;
+    private String ImageName;
 
     @JsonIgnore
     @OneToMany(mappedBy = "id.product")
     private Set<OrderProduct> orders = new HashSet<>();
 
-    public Product(Long id, String name, BigDecimal price) {
+    public Product(Integer id, String name, BigDecimal price) {
         this.id = id;
         this.name = name;
         this.price = price;

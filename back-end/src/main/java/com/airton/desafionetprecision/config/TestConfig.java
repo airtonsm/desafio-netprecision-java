@@ -26,10 +26,10 @@ public class TestConfig implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Product p1 = new Product(1147L, "Cachorro quente", BigDecimal.valueOf(3.00));
-        Product p2 = new Product(1154L, "Bauru", BigDecimal.valueOf(2.50));
-        Product p3 = new Product(1164L, "Misto Quente", BigDecimal.valueOf(2.00));
-        Product p4 = new Product(1155L, "x-Burger", BigDecimal.valueOf(6.00));
+        Product p1 = new Product(1147, "Cachorro quente", BigDecimal.valueOf(3.00));
+        Product p2 = new Product(1154, "Bauru", BigDecimal.valueOf(2.50));
+        Product p3 = new Product(1164, "Misto Quente", BigDecimal.valueOf(2.00));
+        Product p4 = new Product(1155, "x-Burger", BigDecimal.valueOf(6.00));
 
         productRepository.saveAll(Arrays.asList(p1,p2,p3,p4));
 
