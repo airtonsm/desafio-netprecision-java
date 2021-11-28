@@ -24,12 +24,9 @@
     }
 
     function listar(fnSucesso, fnErro) {
-      return $http({
-        url: PATH_REST_SERVICES + "/nomeServizio",
-        headers: { "Content-Type": undefined },
-        data: formData,
-        method: "POST",
-      }).then(fnSucesso, fnErro);
+      return $http
+        .get(constantes.URL_BASE + "/products")
+        .then(fnSucesso, fnErro);
     }
 
     // function listar() {

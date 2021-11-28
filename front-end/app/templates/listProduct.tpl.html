@@ -13,12 +13,23 @@
         <tr class="table-active">
           <th scope="col">Descriçaõ</th>
           <th scope="col">Preco</th>
+          <th scope="col">imagem</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
         </tr>
       </thead>
       <tbody ng-repeat="prod in vm.produtosListados">
         <tr class="table-dark">
           <td>{{prod.name}}</td>
           <td>{{prod.price}}</td>
+          <td>
+            <img
+              ng-if="prod.base64"
+              data-ng-src="{{prod.base64}}"
+              width="80"
+              height="70"
+            />
+          </td>
           <td><button class="btn btn-primary">Editar</button></td>
           <td><button class="btn btn-primary">excluir</button></td>
         </tr>

@@ -102,6 +102,7 @@
     }
 
     function sucesso(resposta) {
+      console.log("resposta: ", resposta.data);
       vm.produtosListados = resposta.data;
     }
 
