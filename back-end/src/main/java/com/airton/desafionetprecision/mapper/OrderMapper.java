@@ -7,6 +7,7 @@ import com.airton.desafionetprecision.entities.OrderProduct;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
